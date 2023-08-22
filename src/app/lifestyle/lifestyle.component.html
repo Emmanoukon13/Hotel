@@ -1,0 +1,15 @@
+<div class="button-container">
+    <button class="nice-button excursions-button" (click)="navigateTo('excursions')">
+        <mat-icon>explore</mat-icon>
+        Excursions</button>
+    <button class="nice-button experiences-button" (click)="navigateTo('experiences')">
+        <mat-icon>extension</mat-icon>
+        Experiences</button>
+    <button class="nice-button resort-activities-button" (click)="navigateTo('resort-activities')">
+        <mat-icon>fitness_center</mat-icon>
+        Resort & Activities</button>
+    <button class="nice-button wellness-spa-button" (click)="navigateTo('welness-and-spa')">
+        <mat-icon>pool</mat-icon>
+        Wellness & Spa</button>
+</div>
+<router-outlet></router-outlet>

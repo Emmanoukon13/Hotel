@@ -1,0 +1,26 @@
+.content-container {
+    display: flex;
+    flex-direction: column;
+    background-image:url('../../../assets/images/pexels-asad-photo-maldives-457881.jpg');
+}
+
+.text-container {
+    text-align: center;
+
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Gap between images */
+    padding: 100px;
+    margin:50px;
+}
+
+/* Style individual images */
+.image-container img {
+    max-width: 50%; /* Ensure images don't exceed container width */
+    border: 2px solid #333;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,18 @@
+.toolbar-flex{
+    flex:1 0.7 auto;
+    position: relative;
+    
+}
+
+.navtabs-header a{
+    letter-spacing: 2px;
+    line-height: 1em;
+    text-transform: uppercase;
+    color:transparent;
+    -webkit-text-stroke: 1px rgb(3, 0, 0);
+}
+
+
+
+
+

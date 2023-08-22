@@ -1,0 +1,97 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$thea-primary: (
+    50 : #f6fbfb,
+    100 : #e8f4f4,
+    200 : #d9eded,
+    300 : #c9e6e6,
+    400 : #bee0e0,
+    500 : #b2dbdb,
+    600 : #abd7d7,
+    700 : #a2d2d2,
+    800 : #99cdcd,
+    900 : #8ac4c4,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #f0ffff,
+    A700 : #d6ffff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+  )
+);
+
+$thea-accent: (
+    50 : #fffcf0,
+    100 : #fff7da,
+    200 : #fff1c2,
+    300 : #ffebaa,
+    400 : #ffe797,
+    500 : #ffe385,
+    600 : #ffe07d,
+    700 : #ffdc72,
+    800 : #ffd868,
+    900 : #ffd055,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #fffefa,
+    A700 : #fff6e0,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+  )
+);
+
+
+$theahotel-primary: mat.define-palette($thea-primary,700,300,900);
+$theahotel-accent: mat.define-palette($thea-accent, 100);
+$theahotel-warn: mat.define-palette(mat.$red-palette, 50);
+
+$theahotel-theme: mat.define-light-theme((
+  color: (
+    primary: $theahotel-primary,
+    accent: $theahotel-accent,
+    warn: $theahotel-warn,
+  )
+));
+
+@import './app/navigation/navtabs/navtabs.component-theme.scss';
+@include mat.all-component-themes($theahotel-theme);
+
+
+
+
+a.mat-mdc-list-item:hover,
+.mdc-list-item:hover,
+.mat-mdc-list-item-interactive,
+.mat-mdc-list-item-single-line,
+.mdc-list-item--with-one-line{
+    background-color:mat.get-color-from-palette($theahotel-primary,200);
+    
+}

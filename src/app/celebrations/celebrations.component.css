@@ -1,0 +1,37 @@
+#slider {
+    overflow: hidden;
+    width: 900px; /* Adjust the width as needed */
+    margin: 0 auto;
+    text-align: center;
+    background-color: aquamarine;
+    background-size: cover;
+
+}
+
+#slider figure {
+    width: 500%; /* Adjust the width to accommodate all images */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    animation: slider 15s linear infinite; /* Adjust the animation duration as needed */
+}
+
+#slider figure img {
+    width: 20%; /* Set the width to your desired size */
+    height: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes slider {
+    0% { transform: translateX(0%); }
+    15% { transform: translateX(0%); }
+    20% { transform: translateX(-20%); }
+    40% { transform: translateX(-20%); }
+    45% { transform: translateX(-40%); }
+    65% { transform: translateX(-40%); }
+    70% { transform: translateX(-60%); }
+    90% { transform: translateX(-60%); }
+    95%, 100% { transform: translateX(-80%); }
+}

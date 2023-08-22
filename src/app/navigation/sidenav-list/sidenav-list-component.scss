@@ -1,0 +1,13 @@
+
+@use '@angular/material' as mat;
+
+
+@include mat.core();
+
+@mixin navtabs-component-theme($theahotel){
+
+    $primary:map-get($theahotel,primary);
+    $accent:map-get($theahotel,accent);
+
+   
+}

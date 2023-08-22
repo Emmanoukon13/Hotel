@@ -1,0 +1,7 @@
+.bar-container{
+    background-image: url('../../../assets/images/bar.jpg') ;
+    background-size: cover;
+    height:calc(130vh);
+    text-align: center;
+
+}

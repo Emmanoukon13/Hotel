@@ -1,0 +1,36 @@
+.accomodation-container{
+    background-image:url('../../assets/images/tropical5.jpg') ;
+    background-size: cover;
+    height:800px;
+}
+
+.acco-header{
+    text-align:center;
+    line-height: normal;
+    margin:100px;
+    font-size:20px;
+    height:50px;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+/* Apply some general styling to the image container */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Gap between images */
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+/* Style individual images */
+.image-container img {
+    max-width: 30%; /* Ensure images don't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #333;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
