@@ -1,23 +1,40 @@
 <div class="back">
-    <div class="form">
-    <h2>Register</h2>
-    <div class="input">
+    <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
+        <h2>Register</h2>
+        <div class="input">
         <div class="inputBox">
             <label>Username</label>
-            <input type="text" placeholder="John21">
+            <input type="text" placeholder="John21" formControlName="username">
+            <span class="error" *ngIf="registerForm.get('username')?.invalid &&
+            (registerForm.get('username')?.dirty
+           || registerForm.get('username')?.touched 
+           || IsSubmitted)">This Field is required</span>
         </div>
         <div class="inputBox">
             <label>Email</label>
-            <input type="text" placeholder="example@gmail.com">
+            <input type="text" placeholder="example@gmail.com" formControlName="email"/>
+            <span class="error" *ngIf="registerForm.get('email')?.invalid &&
+            (registerForm.get('email')?.dirty
+           || registerForm.get('email')?.touched 
+           || IsSubmitted)">This Field is required</span> 
+        </div>
         <div class="inputBox">
             <label>Password</label>
-            <input type="password" placeholder="....">
-            <div class="inputBox">
-                <label>Repeat Password</label>
-                <input type="password" placeholder="....">
-                <div class="inputBox">
-                    <a href="#"><input type="submit" value="Sign Up"></a>
-                </div>
-    </div>
-    </div>
+            <input type="password" placeholder="...." formControlName="password1"/>
+            <span class="error" *ngIf="registerForm.get('password1')?.invalid &&
+            (registerForm.get('password')?.dirty
+           || registerForm.get('password')?.touched 
+           || IsSubmitted)">This Field is required</span>
+        </div>
+        <div class="inputBox">
+            <label>Repeat Password</label>
+            <input type="password" placeholder="...." formControlName="password2">
+            <span class="error" *ngIf="this.registerForm.get('password1')?.value !=this.registerForm.get('password2')?.value && (registerForm.get('email')?.dirty
+            || registerForm.get('email')?.touched 
+            || IsSubmitted)">Password Does Not Match</span>
+        </div>  
+            <button class="button" type="submit"  >Sign Up</button>
+        </div>
+    </form>
 </div>
+
